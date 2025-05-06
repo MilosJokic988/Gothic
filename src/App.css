@@ -1,0 +1,307 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+
+#root {
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+
+
+
+body {
+  background-color: #0e0e0e;
+  color: #f0f0f0;
+  font-family: 'Cinzel Decorative', serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+.home-section {
+  background: url('/images/spell.jpg') no-repeat center center fixed;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f1f1f1;
+  text-shadow: 2px 2px 8px #000;
+  position: relative;
+}
+
+.home-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(15px); /* Pojačan blur efekat */
+  z-index: -1; 
+}
+
+
+.gothic-font {
+  font-family: 'Cinzel Decorative', serif;
+  letter-spacing: 1px;
+  color:#d4af37; 
+}
+
+a, .nav-link {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover, .nav-link:hover {
+  color: #d4af37;
+}
+
+section {
+  background: linear-gradient(to bottom, #0e0e0e, #1a1a1a);
+  padding: 4rem 2rem;
+}
+
+
+h1, p {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+
+h1 {
+  animation-delay: 0.2s;
+}
+
+p {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-section {
+
+  
+    background: url('/images/graveyard.jpg') no-repeat center center fixed !important;
+    background-size: cover !important;
+  
+}
+
+
+.sepia-card img {
+  filter: sepia(0.85) contrast(1.1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 8px;
+}
+
+.sepia-card:hover img {
+  transform: scale(1.03);
+  filter: sepia(0.6) contrast(1.3);
+}
+
+.sepia-card .card-body {
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+}
+
+.sepia-card .card-title {
+  font-size: 1.2rem;
+  color: #d4af37;
+  text-align: center;
+}
+
+.mysticism-section {
+  background: url('/images/parchment.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.8);
+  min-height: 100vh;
+  color: #e6e0d8;
+  text-shadow: 1px 1px 5px #000;
+  font-family: 'Georgia', serif;
+}
+.mysticism-section h2 {
+  color: #d4af37;
+}
+
+.mysticism-section h4 {
+  color: #c49b0f;
+}
+
+
+.about-section {
+  background: url('/images/parchment2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  color: #f0f0f0;
+  text-shadow: 1px 1px 6px #000;
+  font-family: 'Georgia', serif;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.about-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+
+.about-section h2 {
+  color: #d4af37;
+}
+
+.about-section h4 {
+  color: #c49b0f;
+}
+
+.contact-section {
+  background: url('/images/contact.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh; 
+  padding: 4rem 2rem;
+  font-family: 'Georgia', serif;
+  position: relative;
+}
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.contact-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-form {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-section h2 {
+  color: #d4af37;
+}
+
+/* === Pergament Style for Form === */
+.form-control-pergament {
+  background-color: #f2e1b3;
+  color: #2c2c2c;
+  border: 1px solid #d4af37;
+  font-family: 'Times New Roman', serif;
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-radius: 5px;
+}
+
+.form-control-pergament:focus {
+  border-color: #c49b0f;
+  box-shadow: 0 0 5px rgba(196, 155, 15, 0.7);
+}
+
+button[type='submit'] {
+  background-color: #d4af37;
+  color: #1a1a1a;
+  border: none;
+  font-family: 'Times New Roman', serif;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+}
+
+button[type='submit']:hover {
+  background-color: #c49b0f;
+}
+
+/* ===== Responsive Design for Mobile (max 576px) ===== */
+@media (max-width: 576px) {
+  .home-section h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .home-section p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .sepia-card .card-title {
+    font-size: 1rem;
+  }
+
+  .sepia-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .mysticism-section h2,
+  .about-section h2,
+  .contact-section h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .form-control-pergament {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  button[type='submit'] {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .gallery-section {
+    background-attachment: scroll !important;
+  }
+
+  .home-section,
+  .mysticism-section,
+  .about-section,
+  .contact-section {
+    background-attachment: scroll;
+  }
+}
